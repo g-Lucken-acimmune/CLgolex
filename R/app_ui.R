@@ -9,9 +9,10 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      h1("CLgolex"),
-      tableOutput("tbl_mtcars")
+    navbarPage(
+      tags$header("Shiny App with Pages"),
+      tabPanel("Histogram", histpageUI("hist")),
+      tabPanel("Table", tablepageUI("table"))
     )
   )
 }

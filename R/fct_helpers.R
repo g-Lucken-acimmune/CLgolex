@@ -1,7 +1,17 @@
-#' helpers 
+#' helpers
 #'
-#' @description A fct function
+#' @description fct to create histogram
 #'
-#' @return The return value, if any, from executing the function.
+#' @return histogram
 #'
 #' @noRd
+
+
+my_histogram <- function(data, breaks, main) {
+  hist(
+    x = data,
+    breaks = breaks,
+    main = main
+  )
+}
+

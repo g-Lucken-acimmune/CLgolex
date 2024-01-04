@@ -1,31 +1,59 @@
-#' name_of_module2 UI Function
+#' hist_page
 #'
-#' @description A shiny Module.
+#' @description Module for Histogram Page
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
-#' @noRd 
+#' @noRd
 #'
-#' @importFrom shiny NS tagList 
-mod_name_of_module2_ui <- function(id){
-  ns <- NS(id)
+#' @importFrom shiny NS tagList
+#' @import glue
+
+histpageUI <- function(id){
+  # return tag list to bundle components together without saying how they will
+  #   be laid out
   tagList(
- 
+    h2("Plots Page"),
+    fluidRow(
+      column(
+        2,
+        # Use "NS()" to combine module id and component id
+        selectInput(NS(id, "var"), "Variable", choices = names(mtcars)),
+        numericInput(NS(id, "bins"), "Bins", value = 10, min = 1)
+      ),
+      column(
+        10,
+        plotOutput(NS(id, "plot"))
+      )
+    )
   )
 }
-    
+
 #' name_of_module2 Server Functions
 #'
-#' @noRd 
-mod_name_of_module2_server <- function(id){
-  moduleServer( id, function(input, output, session){
-    ns <- session$ns
- 
+#' @noRd
+
+histpageServer <- function(id){
+
+  moduleServer(id, function(input, output, session) {
+    data <- reactive(mtcars[[input$var]])
+    output$plot <- renderPlot({
+      my_histogram(
+        data(),
+        breaks = input$bins,
+        main = glue::glue('Histogram of {input$var}')
+      )
+    })
+    # return the selected variable in a list
+    #   this allows more outputs to be added later
+    list(
+      selected_var = reactive(input$var)
+    )
   })
 }
-    
+
 ## To be copied in the UI
-# mod_name_of_module2_ui("name_of_module2_1")
-    
+# histpageUI("plots")
+
 ## To be copied in the server
-# mod_name_of_module2_server("name_of_module2_1")
+# histpageServer("plots")

@@ -1,0 +1,117 @@
+    1  cd Documents
+    2  mkdir Premierprojet
+    3  cd premierprojet
+    4  git config -- global user.name "Garance Lucken"
+    5  git config -- globalcolors.status auto
+    6  cd Premierprojet
+    7  back
+    8  cd Documents
+    9  git config --global user.name "Garance Lucken"
+   10  git config --global user.email gje.lucken@gmail.com
+   11  git config --global color.diff auto
+   12  git config --global color.status auto
+   13  git config --global color.branch auto
+   14  git config --global core.editor vim
+   15  git config --global merge.tool vimdiff
+   16  git init 
+   17  git config --list
+   18  pwd
+   19  git add gittest.R
+   20  git commit -m "ajout du projet R de base"
+   21  git commit
+   22  git remote add
+   23  origin https://github.com/G-Lck/OpenclassroomsProject
+   24  git remote add origin https://github.com/G-Lck/OpenclassroomsProject .git
+   25  git branch -M main
+   26  git push -u origin main
+   27  git remote add
+   28  git remote add origin https://G-Lck/OpenclassroomsProject .git
+   29  git branch -M main
+   30  git push -u origin main
+   31  git branch -M master
+   32  git push -u origin master
+   33  git branch
+   34  git branch cagnotte
+   35  git branch
+   36  git checkout 'cagnotte'
+   37  git branch
+   38  touch cagnotte.txt
+   39  git add cagnotte.txt
+   40  git commit -m "Réalisation de la partie cagnotte coté front end "
+   41  git push -u origin cagnotte
+   42  git remote -v
+   43  git push -u premierprojet cagnotte
+   44  git remote add origin https://G-Lck/OpenclassroomsProject .git
+   45  git branch -M main
+   46  git push -u origin main
+   47  git remote add origin https://github.com/G-Lck/OpenclassroomsProject .git
+   48  git branch -M main
+   49  git push -u origin main
+   50  git remote add origin https://github.com/G-Lck/OpenclassroomsProject.git
+   51  git branch -M main
+   52  git push -u origin main
+   53  git push -u origin main
+   54  git init
+   55  git add
+   56  git add CLgolex
+   57  git commit CLgolex
+   58  cd..
+   59  cd
+   60  cd Documents
+   61  git commit CLgolex
+   62  cd CLgolex
+   63  git commmit .git
+   64  git commit .git
+   65  git add .git
+   66  git commit .git
+   67  git commit
+   68  git add
+   69  git push -u origin master
+   70  git push -u origin master
+   71  git push -u CLgolex master
+   72  git status
+   73  git log
+   74  git log --oneline --graph 
+   75  git checkout main
+   76  git commit .
+   77  git status
+   78  git add .
+   79  git status
+   80  git add DESCRIPTION 
+   81  git status
+   82  git add R
+   83  git add tests
+   84  git status
+   85  git add ./
+   86  git status
+   87  git add ./
+   88  git status
+   89  git commit -m "update app"
+   90  git pull 
+   91  git commit --no-verify 
+   92  git log -graph
+   93  git log --graph
+   94  git push 
+   95  git status
+   96  git checkout main 
+   97  git pull 
+   98  git merge master
+   99  git checkout master
+  100  git checkout main
+  101  git status
+  102  git add ./
+  103  git status
+  104  git commit
+  105  git status
+  106  git push
+  107  git pull
+  108  git fetch master
+  109  git branch
+  110  git branch -d master
+  111  bit branch -a
+  112  git branch -a
+  113  git prune origin
+  114  git branch -a
+  115  git history
+  116  history
+  117  history > history.txt
